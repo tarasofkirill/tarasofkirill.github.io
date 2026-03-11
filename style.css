@@ -14,8 +14,15 @@
     --aws-badge: #FF9900;
     --mongodb-badge: #47A248;
     --express-badge: #000000;
-    --laravel-badge: #FF2D20;
-    --mern-badge: #3c873a;
+    --nodejs-badge: #68A063;
+    --postgres-badge: #4169E1;
+    --redis-badge: #DC382D;
+    --k8s-badge: #326CE5;
+    --docker-badge: #2496ED;
+    --js-badge: #F7DF1E;
+    --sql-badge: #4479A1;
+    --sentry-badge: #362D59;
+    --sentry-text: #362D59;
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     --radius: 12px;
@@ -38,8 +45,15 @@
     --aws-badge: #FFC46B;
     --mongodb-badge: #6FCF97;
     --express-badge: #CCCCCC;
-    --laravel-badge: #FF6B4A;
-    --mern-badge: #7CCF7C;
+    --nodejs-badge: #9BCF8B;
+    --postgres-badge: #7F9CF5;
+    --redis-badge: #F87171;
+    --k8s-badge: #7F9CF5;
+    --docker-badge: #6BB9F0;
+    --js-badge: #F7DF1E;
+    --sql-badge: #6FCF97;
+    --sentry-badge: #A0A0A0;
+    --sentry-text: #CCCCCC;
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
 }
@@ -103,10 +117,7 @@ section:last-of-type {
     font-size: 52px;
     font-weight: 700;
     margin-bottom: 16px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--text-color);
     line-height: 1.2;
 }
 
@@ -225,11 +236,24 @@ section:last-of-type {
     box-shadow: var(--shadow);
 }
 
-/* Tech-specific colors */
+/* Tech-specific colors - расширенная версия */
 .python {
     color: #3776AB;
     border-color: #3776AB;
     background: rgba(55, 118, 171, 0.05);
+}
+
+.javascript,
+.js {
+    color: var(--js-badge);
+    border-color: var(--js-badge);
+    background: rgba(247, 223, 30, 0.05);
+}
+
+.sql {
+    color: var(--sql-badge);
+    border-color: var(--sql-badge);
+    background: rgba(68, 121, 161, 0.05);
 }
 
 .django {
@@ -242,30 +266,6 @@ section:last-of-type {
     color: var(--fastapi-badge);
     border-color: var(--fastapi-badge);
     background: rgba(0, 150, 136, 0.05);
-}
-
-.drf {
-    color: var(--django-badge);
-    border-color: var(--django-badge);
-    background: rgba(9, 46, 32, 0.05);
-}
-
-.sqlalchemy {
-    color: #D71F00;
-    border-color: #D71F00;
-    background: rgba(215, 31, 0, 0.05);
-}
-
-.pydantic {
-    color: #E92063;
-    border-color: #E92063;
-    background: rgba(233, 32, 99, 0.05);
-}
-
-.celery {
-    color: #37814A;
-    border-color: #37814A;
-    background: rgba(55, 129, 74, 0.05);
 }
 
 /* MERN Stack Colors */
@@ -288,86 +288,29 @@ section:last-of-type {
 }
 
 .nodejs {
-    color: #68A063;
-    border-color: #68A063;
+    color: var(--nodejs-badge);
+    border-color: var(--nodejs-badge);
     background: rgba(104, 160, 99, 0.05);
 }
 
 .mern {
-    color: var(--mern-badge);
-    border-color: var(--mern-badge);
-    background: linear-gradient(135deg, rgba(60, 135, 58, 0.1), rgba(97, 218, 251, 0.1));
-    border-width: 2px;
+    color: white;
+    background: linear-gradient(135deg, #3c873a, #61DAFB, #68A063);
+    border: none;
     font-weight: 600;
-}
-
-/* Laravel Colors */
-.laravel {
-    color: var(--laravel-badge);
-    border-color: var(--laravel-badge);
-    background: rgba(255, 45, 32, 0.05);
-}
-
-.php {
-    color: #777BB4;
-    border-color: #777BB4;
-    background: rgba(119, 123, 180, 0.05);
-}
-
-.artisan {
-    color: var(--laravel-badge);
-    border-color: var(--laravel-badge);
-    background: rgba(255, 45, 32, 0.05);
-}
-
-.eloquent {
-    color: #F05340;
-    border-color: #F05340;
-    background: rgba(240, 83, 64, 0.05);
-}
-
-.blade {
-    color: #F55247;
-    border-color: #F55247;
-    background: rgba(245, 82, 71, 0.05);
-}
-
-/* Database Colors */
-.postgres {
-    color: #4169E1;
-    border-color: #4169E1;
-    background: rgba(65, 105, 225, 0.05);
-}
-
-.redis {
-    color: #DC382D;
-    border-color: #DC382D;
-    background: rgba(220, 56, 45, 0.05);
-}
-
-.mysql {
-    color: #4479A1;
-    border-color: #4479A1;
-    background: rgba(68, 121, 161, 0.05);
-}
-
-.indexing,
-.partitioning {
-    color: #8b5cf6;
-    border-color: #8b5cf6;
-    background: rgba(139, 92, 246, 0.05);
 }
 
 /* DevOps Colors */
 .docker {
-    color: #2496ED;
-    border-color: #2496ED;
+    color: var(--docker-badge);
+    border-color: var(--docker-badge);
     background: rgba(36, 150, 237, 0.05);
 }
 
+.k8s,
 .kubernetes {
-    color: #326CE5;
-    border-color: #326CE5;
+    color: var(--k8s-badge);
+    border-color: var(--k8s-badge);
     background: rgba(50, 108, 229, 0.05);
 }
 
@@ -389,17 +332,50 @@ section:last-of-type {
     background: rgba(252, 198, 36, 0.05);
 }
 
-/* Tools Colors */
-.git {
-    color: #F05032;
-    border-color: #F05032;
-    background: rgba(240, 80, 50, 0.05);
+.aws {
+    color: var(--aws-badge);
+    border-color: var(--aws-badge);
+    background: rgba(255, 153, 0, 0.05);
 }
 
+/* CI/CD */
 .github-actions {
     color: #2088FF;
     border-color: #2088FF;
     background: rgba(32, 136, 255, 0.05);
+}
+
+.gitlab-ci {
+    color: #FC6D26;
+    border-color: #FC6D26;
+    background: rgba(252, 109, 38, 0.05);
+}
+
+/* Database Colors */
+.postgres,
+.postgresql {
+    color: var(--postgres-badge);
+    border-color: var(--postgres-badge);
+    background: rgba(65, 105, 225, 0.05);
+}
+
+.redis {
+    color: var(--redis-badge);
+    border-color: var(--redis-badge);
+    background: rgba(220, 56, 45, 0.05);
+}
+
+.mysql {
+    color: #4479A1;
+    border-color: #4479A1;
+    background: rgba(68, 121, 161, 0.05);
+}
+
+/* Tools */
+.git {
+    color: #F05032;
+    border-color: #F05032;
+    background: rgba(240, 80, 50, 0.05);
 }
 
 .pytest {
@@ -408,22 +384,28 @@ section:last-of-type {
     background: rgba(10, 158, 220, 0.05);
 }
 
-.poetry {
-    color: #60A5FA;
-    border-color: #60A5FA;
-    background: rgba(96, 165, 250, 0.05);
+.jira {
+    color: #0052CC;
+    border-color: #0052CC;
+    background: rgba(0, 82, 204, 0.05);
 }
 
-.ruff {
-    color: #93b94a;
-    border-color: #93b94a;
-    background: rgba(147, 185, 74, 0.05);
+.figma {
+    color: #F24E1E;
+    border-color: #F24E1E;
+    background: rgba(242, 78, 30, 0.05);
 }
 
-.axios {
-    color: #5A29E4;
-    border-color: #5A29E4;
-    background: rgba(90, 41, 228, 0.05);
+.postman {
+    color: #FF6C37;
+    border-color: #FF6C37;
+    background: rgba(255, 108, 55, 0.05);
+}
+
+.sentry {
+    color: var(--sentry-text);
+    border-color: var(--sentry-badge);
+    background: rgba(54, 45, 89, 0.05);
 }
 
 .web3 {
@@ -432,44 +414,16 @@ section:last-of-type {
     background: rgba(246, 133, 27, 0.05);
 }
 
-.aws {
-    color: var(--aws-badge);
-    border-color: var(--aws-badge);
-    background: rgba(255, 153, 0, 0.05);
-}
-
-/* MERN Stack Special Styling */
-.mern-stack {
-    background: linear-gradient(135deg, #3c873a, #61DAFB, #68A063);
-    color: white;
-    border: none;
-    font-weight: 600;
-    padding: 8px 20px;
-}
-
-.mern-stack:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(60, 135, 58, 0.3);
-}
-
-/* Laravel Stack Special Styling */
-.laravel-stack {
-    background: linear-gradient(135deg, #FF2D20, #F05340);
-    color: white;
-    border: none;
-    font-weight: 600;
-    padding: 8px 20px;
-}
-
-.laravel-stack:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(255, 45, 32, 0.3);
+.solidity {
+    color: #363636;
+    border-color: #363636;
+    background: rgba(54, 54, 54, 0.05);
 }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 32px;
     margin-top: 20px;
 }
 
@@ -481,11 +435,14 @@ section:last-of-type {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    height: 100%;
 }
 
 .project-card-body {
-    padding: 30px;
+    padding: 28px;
     flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
@@ -504,20 +461,21 @@ section:last-of-type {
 }
 
 .project-header {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 .project-header h3 {
     font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 16px;
+    font-weight: 700;
+    margin-bottom: 14px;
     color: var(--text-color);
+    line-height: 1.3;
 }
 
 .project-badges {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
 }
 
 .badge {
@@ -528,31 +486,37 @@ section:last-of-type {
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.3px;
+    white-space: nowrap;
 }
 
 .badge.mern {
-    background: linear-gradient(135deg, #3c873a, #61DAFB);
-}
-
-.badge.laravel {
-    background: linear-gradient(135deg, #FF2D20, #F05340);
+    background: linear-gradient(135deg, #3c873a, #61DAFB, #68A063);
 }
 
 .badge.web3 {
     background: linear-gradient(135deg, #F6851B, #E2761B);
 }
 
+.badge.fastapi {
+    background: linear-gradient(135deg, #009688, #4DB6AC);
+}
+
+.badge.django {
+    background: linear-gradient(135deg, #092E20, #0B3B2A);
+}
+
 .project-description {
     color: var(--text-secondary);
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     line-height: 1.7;
     font-size: 15px;
+    flex-grow: 1;
 }
 
 .project-stats {
     display: flex;
-    gap: 24px;
-    margin-bottom: 28px;
+    gap: 20px;
+    margin-bottom: 24px;
     flex-wrap: wrap;
     padding: 16px 0;
     border-top: 1px solid var(--border-color);
@@ -562,35 +526,41 @@ section:last-of-type {
 .stat {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     font-size: 14px;
+    font-weight: 500;
     color: var(--text-secondary);
 }
 
 .stat i {
     color: var(--primary-color);
     font-size: 16px;
+    width: 20px;
+    text-align: center;
 }
 
 .project-links {
     display: flex;
-    gap: 16px;
+    gap: 12px;
     flex-wrap: wrap;
+    margin-top: auto;
 }
 
 .btn {
-    padding: 12px 28px;
+    padding: 12px 24px;
     border-radius: 30px;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     transition: var(--transition);
     cursor: pointer;
     border: none;
     letter-spacing: 0.3px;
+    flex: 1 1 auto;
+    justify-content: center;
 }
 
 .btn-primary {
@@ -602,12 +572,24 @@ section:last-of-type {
     background: linear-gradient(135deg, #3c873a, #61DAFB);
 }
 
-.btn-primary.laravel {
-    background: linear-gradient(135deg, #FF2D20, #F05340);
+.btn-primary.fastapi {
+    background: linear-gradient(135deg, #009688, #4DB6AC);
+}
+
+.btn-primary.django {
+    background: linear-gradient(135deg, #092E20, #0B3B2A);
+}
+
+.btn-primary.web3 {
+    background: linear-gradient(135deg, #F6851B, #E2761B);
+}
+
+.btn-primary.aws {
+    background: linear-gradient(135deg, #FF9900, #FFAC33);
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
     box-shadow: var(--shadow-lg);
 }
 
@@ -620,7 +602,25 @@ section:last-of-type {
 .btn-secondary:hover {
     background-color: var(--card-bg);
     border-color: var(--primary-color);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+}
+
+.btn-secondary:active,
+.btn-primary:active {
+    transform: translateY(-1px);
+}
+
+/* Стили для заблокированных кнопок */
+.btn-primary[style*="cursor:default"],
+.btn-primary[onclick*="return false"] {
+    opacity: 0.7;
+    cursor: default !important;
+}
+
+.btn-primary[style*="cursor:default"]:hover,
+.btn-primary[onclick*="return false"]:hover {
+    transform: none;
+    box-shadow: none;
 }
 
 .timeline {
@@ -630,9 +630,9 @@ section:last-of-type {
 
 .timeline-item {
     display: flex;
-    gap: 40px;
-    margin-bottom: 40px;
-    padding: 20px;
+    gap: 30px;
+    margin-bottom: 30px;
+    padding: 24px;
     background-color: var(--card-bg);
     border-radius: var(--radius);
     border: 1px solid var(--border-color);
@@ -640,16 +640,21 @@ section:last-of-type {
 }
 
 .timeline-item:hover {
-    transform: translateX(5px);
+    transform: translateX(8px);
     box-shadow: var(--shadow);
 }
 
 .timeline-date {
-    min-width: 160px;
+    min-width: 140px;
     font-weight: 700;
     color: var(--primary-color);
     font-size: 16px;
     padding-top: 4px;
+    background: rgba(37, 99, 235, 0.1);
+    padding: 6px 12px;
+    border-radius: 20px;
+    text-align: center;
+    height: fit-content;
 }
 
 .timeline-content {
@@ -661,15 +666,16 @@ section:last-of-type {
     font-weight: 700;
     margin-bottom: 8px;
     color: var(--text-color);
+    line-height: 1.4;
 }
 
 .timeline-company {
     color: var(--text-secondary);
     margin-bottom: 16px;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     display: inline-block;
-    padding: 4px 12px;
+    padding: 4px 14px;
     background: var(--border-color);
     border-radius: 20px;
 }
@@ -697,36 +703,37 @@ section:last-of-type {
 
 .contact-description {
     text-align: center;
-    max-width: 600px;
+    max-width: 650px;
     margin: 0 auto 32px;
-    font-size: 18px;
+    font-size: 17px;
     color: var(--text-secondary);
     background: var(--card-bg);
-    padding: 16px 32px;
+    padding: 16px 28px;
     border-radius: 50px;
     border: 1px solid var(--border-color);
+    font-weight: 500;
 }
 
 .contact-links {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 20px;
 }
 
 .contact-link {
-    padding: 18px 32px;
+    padding: 16px 28px;
     background-color: var(--card-bg);
     border-radius: 50px;
     text-decoration: none;
     color: var(--text-color);
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 12px;
     transition: var(--transition);
     border: 1px solid var(--border-color);
     font-weight: 500;
-    min-width: 260px;
+    min-width: 240px;
     justify-content: center;
 }
 
@@ -757,6 +764,7 @@ section:last-of-type {
     padding: 48px 0 32px;
     color: var(--text-secondary);
     font-size: 15px;
+    border-top: 1px solid var(--border-color);
 }
 
 .footer p:first-child {
@@ -774,6 +782,10 @@ section:last-of-type {
         width: 180px;
         height: 180px;
         font-size: 48px;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     }
 }
 
@@ -816,15 +828,18 @@ section:last-of-type {
 
     .projects-grid {
         grid-template-columns: 1fr;
+        gap: 28px;
     }
 
     .timeline-item {
         flex-direction: column;
         gap: 15px;
+        padding: 20px;
     }
 
     .timeline-date {
         min-width: auto;
+        width: fit-content;
     }
 
     .contact-links {
@@ -840,6 +855,10 @@ section:last-of-type {
     .avatar {
         width: 160px;
         height: 160px;
+    }
+
+    .project-stats {
+        gap: 16px;
     }
 }
 
@@ -865,25 +884,33 @@ section:last-of-type {
     }
 
     .project-header h3 {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .project-stats {
-        gap: 16px;
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
     }
 
     .btn {
-        padding: 10px 20px;
-        font-size: 14px;
+        padding: 10px 18px;
+        font-size: 13px;
+        width: 100%;
     }
 
     .contact-link {
-        padding: 14px 24px;
+        padding: 14px 20px;
         min-width: auto;
+        font-size: 15px;
     }
 
     .timeline-item {
-        padding: 15px;
+        padding: 16px;
+    }
+
+    .timeline-content h3 {
+        font-size: 18px;
     }
 
     .hero-buttons {
@@ -902,9 +929,18 @@ section:last-of-type {
         height: 140px;
         font-size: 40px;
     }
+
+    .project-badges {
+        gap: 6px;
+    }
+
+    .badge {
+        padding: 4px 10px;
+        font-size: 11px;
+    }
 }
 
-/* Animation for timeline items */
+/* Animation */
 @keyframes slideIn {
     from {
         opacity: 0;
@@ -937,6 +973,12 @@ section:last-of-type {
 .dark-mode .express {
     color: #CCCCCC;
     border-color: #CCCCCC;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode .solidity {
+    color: #CCCCCC;
+    border-color: #CCCCCC;
 }
 
 /* Print styles */
@@ -956,5 +998,11 @@ section:last-of-type {
     .project-card,
     .timeline-item {
         break-inside: avoid;
+    }
+
+    .badge {
+        background: #f0f0f0;
+        color: black;
+        -webkit-text-fill-color: black;
     }
 }
